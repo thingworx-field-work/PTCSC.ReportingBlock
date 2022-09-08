@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="PTCSC.ReportingBlock.PercentChangeState_ST"
+         projectName="PTCSC.ReportingBlock"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.ArrowRedDown_SY",
+                "defaultValue" : "0",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.ArrowGreenDown_SY",
+                "defaultValue" : "1",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.ArrowRedUp_SY",
+                "defaultValue" : "2",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.ArrowGreenUp_SY",
+                "defaultValue" : "3",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "DefaultContainerStyle",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         baseDataShape=""
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="PTCSC.ReportingBlock.TotalTimeMainScreen"
+         projectName="PTCSC.ReportingBlock"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="NUMBER"
+                 description=""
+                 name="numberOfDays"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="false"
+                 baseType="NUMBER"
+                 description=""
+                 name="totalTimeValue"
+                 ordinal="1"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

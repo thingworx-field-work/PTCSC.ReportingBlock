@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         description="State definition for initiatives status. {PTCSC.ReportingBlock.InitiativeStatus_ST}"
+         documentationContent=""
+         homeMashup=""
+         name="PTCSC.ReportingBlock.InitiativeStatus_ST"
+         projectName="PTCSC.ReportingBlock"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.NotStartedCircle_SY",
+                "defaultValue" : "Not Started",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.InProgress_SY",
+                "defaultValue" : "In Progress",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.AtRisk_SY",
+                "defaultValue" : "At Risk",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.Overdue_SY",
+                "defaultValue" : "Overdue",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.Complete_SY",
+                "defaultValue" : "Complete",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "PTCSC.ReportingBlock.NotStartedCircle_SY",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

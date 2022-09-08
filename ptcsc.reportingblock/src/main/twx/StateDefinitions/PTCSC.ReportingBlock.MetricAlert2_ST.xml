@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="PTCSC.ReportingBlock.MetricAlert2_ST"
+         projectName="PTCSC.ReportingBlock"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "PTCSC.ReportingBlock.AlertCardSmall_MD",
+                  "lineColor" : "",
+                  "lineStyle" : "solid",
+                  "lineThickness" : 1,
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "true",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : "DefaultContainerStyle",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

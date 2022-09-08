@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="PTCSC.ReportingBlock.PieChart_ST"
+         projectName="PTCSC.ReportingBlock"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(240,91,128,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "1",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(141,144,154,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "2",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(187,104,200,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "3",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(47,151,255,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "4",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(59,69,80,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "5",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(184,132,154,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "6",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(138,79,247,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "7",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(19,148,146,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "8",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(170,145,3,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "9",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(195,62,112,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "10",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(144,75,111,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "11",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(157,39,176,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "12",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(51,99,216,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "13",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(0,112,158,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "14",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(42,91,89,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "15",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(56,19,148,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "16",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(143,56,9,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "17",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(142,101,20,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "18",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(93,95,105,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "19",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(134,51,94,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "defaultValue" : "20",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              }, {
+                "defaultStyleDefinition" : {
+                  "backgroundColor" : "rgba(189,189,189,1)",
+                  "displayString" : "",
+                  "fontEmphasisBold" : false,
+                  "fontEmphasisItalic" : false,
+                  "fontEmphasisUnderline" : false,
+                  "foregroundColor" : "",
+                  "image" : "",
+                  "lineColor" : "rgba(255,255,255,1)",
+                  "lineStyle" : "solid",
+                  "lineThickness" : "2",
+                  "secondaryBackgroundColor" : "",
+                  "textSize" : "normal"
+                },
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

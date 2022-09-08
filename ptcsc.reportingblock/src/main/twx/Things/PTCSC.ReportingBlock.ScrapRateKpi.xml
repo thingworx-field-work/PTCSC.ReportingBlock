@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="">
+    <Things>
+        <Thing
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         description="Thing that returns the kpi for ScrapRate"
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="PTCSC.ReportingBlock.ScrapRateKpi"
+         projectName="PTCSC.ReportingBlock"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getInitiativesForKpi">
+                        <ResultType
+                         aspect.dataShape="PTCSC.ReportingBlock.KpiInitiatives_DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getKpi">
+                        <ResultType
+                         aspect.dataShape="PTCSC.ReportingBlock.GenericCard_DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getTrend">
+                        <ResultType
+                         aspect.dataShape="PTCSC.ReportingBlock.GenericChart_DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="GenerateAdministrationInformation">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                        <FieldDefinition
+                                         baseType="JSON"
+                                         description=""
+                                         name="editorSettings"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let values = Things["PTCSC.ReportingBlock.AdministrationMetricDetails_DT"].CreateValues();
+                                        values.metricName = metricName;
+                                        values.metricDisplayName = metricDisplayName;
+                                        values.unitOfMeasure = "Percent";
+                                        values.rollUpBehavior = "Average";
+                                        values.correlation = "Negative";
+                                        values.description = "Metric description";
+                                        values.calculationFormula = "Total scrap / (total good + scrap) as a % across all completed jobs for all equipment at or lower than the current hierarchy level";
+                                        
+                                        
+                                        let id = Things["PTCSC.ReportingBlock.AdministrationMetricDetails_DT"].AddOrUpdateDataTableEntry({
+                                            values: values
+                                        });
+                                        ]]>
+                                        </code>
+                                        <editorSettings>
+                                            <json>
+                                            <![CDATA[
+                                            {"viewState":{"viewState":{"firstPositionDeltaTop":0,"scrollLeft":0,"firstPosition":{"column":1,"lineNumber":1}},"cursorState":[{"inSelectionMode":false,"selectionStart":{"column":160,"lineNumber":8},"position":{"column":160,"lineNumber":8}}],"contributionsState":{"editor.contrib.wordHighlighter":false,"editor.contrib.folding":{"provider":"indent","lineCount":13,"foldedImports":false}}}}
+                                            ]]>
+                                            </json>
+                                        </editorSettings>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getInitiativesForKpi">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let dateValue = new Date();
+                                        var calculatedDateValue = dateAddDays(dateValue, 10);
+                                        
+                                        var statusName = ["In Progress", "At Risk", "Completed"];
+                                        var eqName = ["AC-CellFab", "BOS-CellFab", "Center01"];
+                                        var initNames = ["Repair Engine", "Repair Drill", "Change battery"];
+                                        
+                                        let initTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "PTCSC.ReportingBlock.KpiInitiatives_DS"
+                                        });
+                                        
+                                        for (var i = 0; i < 3; i++) {
+                                        
+                                        	let newEntry = {
+                                        		status: statusName[Math.floor(Math.random() * 3)],
+                                        		initiativeName: initNames[Math.floor(Math.random() * 3)],
+                                        		target: 50,
+                                        		achieved: 25,
+                                        		change: 25,
+                                        		equipment: eqName[Math.floor(Math.random() * 3)],
+                                        		startDate: dateValue,
+                                        		endDate: calculatedDateValue
+                                        	};
+                                        
+                                        	initTable.AddRow(newEntry);
+                                        
+                                        }
+                                        let result = initTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getKpi">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let dateValue = new Date();
+                                        dateValue = dateAddDays(dateValue, -100);
+                                        
+                                        let sampleRows = 1;
+                                        var data01 = { dataShape: { fieldDefinitions: {} }, rows: [] };
+                                        
+                                        data01.dataShape.fieldDefinitions['actualValue'] = { name: 'actualValue', baseType: 'NUMBER' };
+                                        data01.dataShape.fieldDefinitions['targetValue'] = { name: 'targetValue', baseType: 'NUMBER' };
+                                        data01.dataShape.fieldDefinitions['gainPercentageValue'] = { name: 'gainPercentageValue', baseType: 'NUMBER' };
+                                        data01.dataShape.fieldDefinitions['infotableValues'] = { name: 'infotableValues', baseType: 'INFOTABLE' };
+                                        data01.dataShape.fieldDefinitions['timeframe'] = { name: 'timeframe', baseType: 'STRING' };
+                                        data01.dataShape.fieldDefinitions['cardTitle'] = { name: 'cardTitle', baseType: 'STRING' };
+                                        data01.dataShape.fieldDefinitions['progressValue'] = { name: 'progressValue', baseType: 'NUMBER' };
+                                        data01.dataShape.fieldDefinitions['isAlerted'] = { name: 'isAlerted', baseType: 'NUMBER' };
+                                        data01.dataShape.fieldDefinitions['improvment'] = { name: 'improvment', baseType: 'NUMBER' };
+                                        
+                                        var params01 = {
+                                            json: data01 /* JSON */
+                                        };
+                                        
+                                        var sampleChart = Resources["InfoTableFunctions"].FromJSON(params01);
+                                        
+                                        let lineRows = 100;
+                                        
+                                        var data02 = { dataShape: { fieldDefinitions: {} }, rows: [] };
+                                        
+                                        data02.dataShape.fieldDefinitions['values1'] = { name: 'values1', baseType: 'NUMBER' };
+                                        data02.dataShape.fieldDefinitions['values2'] = { name: 'values2', baseType: 'NUMBER' };
+                                        data02.dataShape.fieldDefinitions['timestamp'] = { name: 'timestamp', baseType: 'DATETIME' };
+                                        
+                                        var params02 = {
+                                            json: data02 /* JSON */
+                                        }; 
+                                        
+                                        var lineChart = Resources["InfoTableFunctions"].FromJSON(params02);
+                                        
+                                        for (let i = 0; i < lineRows; i++) {
+                                        
+                                            var calculatedDateValue = dateAddDays(dateValue, i);
+                                            var newEntry = new Object();
+                                            newEntry.values1 = Math.floor(Math.random() * 23) + 1; // NUMBER
+                                            newEntry.values2 = Math.floor(Math.random() * 50) + 1; // NUMBER
+                                            newEntry.timestamp = calculatedDateValue; // DATETIME
+                                        
+                                            lineChart.AddRow(newEntry);
+                                        }
+                                        
+                                        for (let i = 0; i < sampleRows; i++) {
+                                        
+                                            var newEntry = new Object();
+                                            newEntry.actualValue = Math.floor(Math.random() * 23) + 1; // NUMBER
+                                            newEntry.gainPercentageValue = Math.floor(Math.random() * 50) + 1; // NUMBER
+                                            newEntry.timeframe = "Since last month"; // DATETIME
+                                            newEntry.targetValue = Math.floor(Math.random() * 83) + 1; // NUMBER
+                                            newEntry.gainPercentageValue = Math.floor(Math.random() * 50) + 1; // NUMBER
+                                            newEntry.infotableValues = lineChart; //INFOTABLE
+                                            newEntry.cardTitle = "Scrap Rate (%)";
+                                            newEntry.progressValue = Math.floor(Math.random() * 100) + 1; // NUMBER
+                                        	newEntry.isAlerted = Math.floor(Math.random() * 4); // NUMBER
+                                            newEntry.improvment = Math.random() < 0.5 ? -1 : 1; // NUMBER
+                                        
+                                            sampleChart.AddRow(newEntry);
+                                        }
+                                        
+                                        var result = sampleChart;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getTrend">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let dateValue = new Date();
+                                        dateValue = dateAddDays(dateValue, -100);
+                                        let values = [10, 15, 20, 25, 30, 35, 40, 45, 50, 60];
+                                        
+                                        let chart = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "PTCSC.ReportingBlock.GenericChart_DS"
+                                        });
+                                        
+                                        for (var i = 0; i < 10; i++) {
+                                        
+                                        	var calculatedDateValue = dateAddDays(dateValue, i);
+                                        	var newEntry = new Object();
+                                        	newEntry.values1 = values[i];
+                                        	newEntry.timestamp = calculatedDateValue;
+                                        
+                                        	chart.AddRow(newEntry);
+                                        
+                                        }
+                                        
+                                        let result = chart;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="PTCSC.ReportingBlock.HelperThingShape_TS"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

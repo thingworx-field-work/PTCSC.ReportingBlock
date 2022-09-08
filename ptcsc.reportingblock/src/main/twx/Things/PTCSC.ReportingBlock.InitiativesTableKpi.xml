@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="">
+    <Things>
+        <Thing
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         description="Thing that returns the kpi for InitiativesTableKpi"
+         documentationContent=""
+         effectiveThingPackage="ConfiguredThing"
+         enabled="true"
+         homeMashup=""
+         identifier=""
+         inheritedValueStream=""
+         name="PTCSC.ReportingBlock.InitiativesTableKpi"
+         projectName="PTCSC.ReportingBlock"
+         published="false"
+         tags=""
+         thingTemplate="GenericThing"
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getInitiativesForKpi">
+                        <ResultType
+                         aspect.dataShape="PTCSC.ReportingBlock.KpiInitiatives_DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getKpi">
+                        <ResultType
+                         aspect.dataShape="PTCSC.ReportingBlock.GenericCard_DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     aspect.isAsync="false"
+                     category=""
+                     description=""
+                     isAllowOverride="false"
+                     isLocalOnly="false"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="getTrend">
+                        <ResultType
+                         aspect.dataShape="PTCSC.ReportingBlock.GenericChart_DS"
+                         baseType="INFOTABLE"
+                         description=""
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getInitiativesForKpi">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let dateValue = new Date();
+                                        var calculatedDateValue = dateAddDays(dateValue, 10);
+                                        
+                                        var statusName = ["In Progress", "At Risk", "Completed"];
+                                        var eqName = ["AC-CellFab", "BOS-CellFab", "Center01"];
+                                        var initNames = ["Repair Engine", "Repair Drill", "Change battery"];
+                                        
+                                        let initTable = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "PTCSC.ReportingBlock.KpiInitiatives_DS"
+                                        });
+                                        
+                                        for (var i = 0; i < 3; i++) {
+                                        
+                                        	let newEntry = {
+                                        		status: statusName[Math.floor(Math.random() * 3)],
+                                        		initiativeName: initNames[Math.floor(Math.random() * 3)],
+                                        		target: 50,
+                                        		achieved: 25,
+                                        		change: 25,
+                                        		equipment: eqName[Math.floor(Math.random() * 3)],
+                                        		startDate: dateValue,
+                                        		endDate: calculatedDateValue
+                                        	};
+                                        
+                                        	initTable.AddRow(newEntry);
+                                        
+                                        }
+                                        let result = initTable;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getKpi">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        // initiatives table
+                                        let dateValue = new Date();
+                                        dateValue = dateAddDays(dateValue, -100);
+                                        var statuses = ["In Progress", "At Risk", "Overdue", "Complete"];
+                                        
+                                        let sampleRows = 25;
+                                        var data01 = { dataShape: { fieldDefinitions: {} }, rows: [] };
+                                        
+                                        data01.dataShape.fieldDefinitions['status'] = { name: 'status', baseType: 'STRING' };
+                                        data01.dataShape.fieldDefinitions['initiativeName'] = { name: 'initiativeName', baseType: 'STRING' };
+                                        data01.dataShape.fieldDefinitions['targetValue'] = { name: 'targetValue', baseType: 'NUMBER' };
+                                        data01.dataShape.fieldDefinitions['achievedValue'] = { name: 'achievedValue', baseType: 'NUMBER' };
+                                        data01.dataShape.fieldDefinitions['startDate'] = { name: 'startDate', baseType: 'DATETIME' };
+                                        data01.dataShape.fieldDefinitions['endDate'] = { name: 'endDate', baseType: 'DATETIME' };
+                                        
+                                        var params01 = {
+                                            json: data01 /* JSON */
+                                        };
+                                        
+                                        var sampleChart = Resources["InfoTableFunctions"].FromJSON(params01);
+                                        
+                                        for (let i = 0; i < sampleRows; i++) {
+                                        
+                                            var newEntry = new Object();
+                                            newEntry.status =statuses[(Math.floor(Math.random() * 4) + 0).toFixed()]; // STRING
+                                            newEntry.initiativeName = "Name of Initiative" + Math.floor(Math.random() * 50) + 1; // NUMBER
+                                            newEntry.targetValue = Math.floor(Math.random() * 83) + 1; // NUMBER
+                                            newEntry.achievedValue = Math.floor(Math.random() * 50) + 1; // NUMBER
+                                            newEntry.startDate = dateAddDays(dateValue, -(Math.floor(Math.random() * 100) + 1)); //DATETIME
+                                            newEntry.endDate = dateAddDays(dateValue, -(Math.floor(Math.random() * 5) + 1)); //DATETIME
+                                        
+                                            sampleChart.AddRow(newEntry);
+                                        }
+                                        
+                                        var initiativesTable = sampleChart;
+                                        
+                                        //normal card
+                                        
+                                        let cardSampleRows = 1;
+                                        var data02 = { dataShape: { fieldDefinitions: {} }, rows: [] };
+                                        
+                                        data02.dataShape.fieldDefinitions['actualValue'] = { name: 'actualValue', baseType: 'NUMBER' };
+                                        data02.dataShape.fieldDefinitions['targetValue'] = { name: 'targetValue', baseType: 'NUMBER' };
+                                        data02.dataShape.fieldDefinitions['gainPercentageValue'] = { name: 'gainPercentageValue', baseType: 'NUMBER' };
+                                        data02.dataShape.fieldDefinitions['infotableValues'] = { name: 'infotableValues', baseType: 'INFOTABLE' };
+                                        data02.dataShape.fieldDefinitions['gridValues'] = { name: 'gridValues', baseType: 'INFOTABLE' };
+                                        data02.dataShape.fieldDefinitions['timeframe'] = { name: 'timeframe', baseType: 'STRING' };
+                                        data02.dataShape.fieldDefinitions['cardTitle'] = { name: 'cardTitle', baseType: 'STRING' };
+                                        
+                                        var params02 = {
+                                            json: data02 
+                                        };
+                                        
+                                        var cardSampleChart = Resources["InfoTableFunctions"].FromJSON(params02);
+                                        
+                                        let lineRows = 100;
+                                        
+                                        var data03 = { dataShape: { fieldDefinitions: {} }, rows: [] };
+                                        
+                                        data03.dataShape.fieldDefinitions['values1'] = { name: 'values1', baseType: 'NUMBER' };
+                                        data03.dataShape.fieldDefinitions['values2'] = { name: 'values2', baseType: 'NUMBER' };
+                                        data03.dataShape.fieldDefinitions['timestamp'] = { name: 'timestamp', baseType: 'DATETIME' };
+                                        
+                                        var params03 = {
+                                            json: data03 
+                                        }; 
+                                        
+                                        var lineChart = Resources["InfoTableFunctions"].FromJSON(params03);
+                                        
+                                        for (let i = 0; i < lineRows; i++) {
+                                        
+                                            var calculatedDateValue = dateAddDays(dateValue, i);
+                                            var newEntry = new Object();
+                                            newEntry.values1 = Math.floor(Math.random() * 23) + 1; // NUMBER
+                                            newEntry.values2 = Math.floor(Math.random() * 50) + 1; // NUMBER
+                                            newEntry.timestamp = calculatedDateValue; // DATETIME
+                                        
+                                            lineChart.AddRow(newEntry);
+                                        }
+                                        
+                                        for (let i = 0; i < cardSampleRows; i++) {
+                                        
+                                            var newEntry = new Object();
+                                            newEntry.actualValue = Math.floor(Math.random() * 23) + 1; // NUMBER
+                                            newEntry.gainPercentageValue = Math.floor(Math.random() * 50) + 1; // NUMBER
+                                            newEntry.timeframe = "Since last month"; // DATETIME
+                                            newEntry.targetValue = Math.floor(Math.random() * 83) + 1; // NUMBER
+                                            newEntry.gainPercentageValue = Math.floor(Math.random() * 50) + 1; // NUMBER
+                                            newEntry.infotableValues = lineChart; //INFOTABLE
+                                            newEntry.gridValues = initiativesTable; //INFOTABLE
+                                            newEntry.cardTitle = "Initiatives";
+                                        
+                                            cardSampleChart.AddRow(newEntry);
+                                        }
+                                        
+                                        var result = cardSampleChart;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation
+                     description=""
+                     handlerName="Script"
+                     name="getTrend">
+                        <ConfigurationTables>
+                            <ConfigurationTable
+                             dataShapeName=""
+                             description=""
+                             isMultiRow="false"
+                             name="Script"
+                             ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition
+                                         baseType="STRING"
+                                         description="code"
+                                         name="code"
+                                         ordinal="0"></FieldDefinition>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code>
+                                        <![CDATA[
+                                        let dateValue = new Date();
+                                        dateValue = dateAddDays(dateValue, -100);
+                                        let values = [10, 15, 20, 25, 30, 35, 40, 45, 50, 60];
+                                        
+                                        let chart = Resources["InfoTableFunctions"].CreateInfoTableFromDataShape({
+                                        	infoTableName: "InfoTable",
+                                        	dataShapeName: "PTCSC.ReportingBlock.GenericChart_DS"
+                                        });
+                                        
+                                        for (var i = 0; i < 10; i++) {
+                                        
+                                        	var calculatedDateValue = dateAddDays(dateValue, i);
+                                        	var newEntry = new Object();
+                                        	newEntry.values1 = values[i];
+                                        	newEntry.timestamp = calculatedDateValue;
+                                        
+                                        	chart.AddRow(newEntry);
+                                        
+                                        }
+                                        
+                                        let result = chart;
+                                        ]]>
+                                        </code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ImplementedShapes></ImplementedShapes>
+            <ThingProperties></ThingProperties>
+        </Thing>
+    </Things>
+</Entities>

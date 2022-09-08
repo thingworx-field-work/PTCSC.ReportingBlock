@@ -1,0 +1,1421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="3"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isEditableExtensionObject="true"
+         aspect.isExtension="true"
+         aspect.isFlex="true"
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description="Mashup used for displaying metric details (drill into when selecting a metric from a list)"
+         documentationContent=""
+         homeMashup=""
+         name="PTCSC.ReportingBlock.MetricDetails_MU"
+         projectName="PTCSC.ReportingBlock"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="equipmentUid"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="THINGNAME"
+                 description=""
+                 name="Manager"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="MashupNavigation"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="materialUid"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="selectedkpiName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="shiftUid"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.bindingDirection="BOTH"
+                 aspect.isMandatory="false"
+                 baseType="STRING"
+                 description=""
+                 name="status"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "Things_PTCSC.ReportingBlock.Manager" : {
+                  "DataName" : "Things_PTCSC.ReportingBlock.Manager",
+                  "EntityName" : "PTCSC.ReportingBlock.Manager",
+                  "EntityType" : "Things",
+                  "Id" : "1cd36644-7a32-4bf0-b568-cc9c44d37377",
+                  "RefreshInterval" : 0,
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "0d5cb563-22a1-4f00-9ced-e2c23d9916ad",
+                    "Name" : "GetToolbarConfigurationForCardDetails",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetToolbarConfigurationForCardDetails"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "f86442a7-776a-4d60-aab8-53f4a8f97920",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Manager",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Manager",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "mashupcontainer-16",
+                "TargetSection" : ""
+              }, {
+                "Id" : "3d3acc3e-13fb-44cd-abd8-7efdc2dd4f94",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "selectedkpiName",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "selectedkpiName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "mashupcontainer-16",
+                "TargetSection" : ""
+              }, {
+                "Id" : "185c21bd-680a-41e2-8b8c-4b71450380fe",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Name",
+                  "TargetPropertyBaseType" : "MASHUPNAME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "expression-17",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "mashupcontainer-16",
+                "TargetSection" : ""
+              }, {
+                "Id" : "10ba15a5-63c7-489f-a6d8-9bbb03a43a3b",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "ActionsData",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetToolbarConfigurationForCardDetails",
+                "SourceSection" : "Things_PTCSC.ReportingBlock.Manager",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstoolbar-20",
+                "TargetSection" : ""
+              }, {
+                "Id" : "5e717f21-847e-462e-a750-7f95089fee4c",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "T1_State",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "input",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstoolbar-20",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "expression-17",
+                "TargetSection" : ""
+              }, {
+                "Id" : "108a3810-64c4-4bd2-bacd-bd14de879622",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "T2_State",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "input",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstoolbar-20",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "expression-18",
+                "TargetSection" : ""
+              }, {
+                "Id" : "d39cface-b09c-4d64-a726-cc6106e8d981",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "B2_Visible",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "expression-19",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstoolbar-20",
+                "TargetSection" : ""
+              }, {
+                "Id" : "5d1589f1-0110-49ed-b386-5dbd2bc0f0c6",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "hierarchyDrillDown",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "hierarchyDrillDown",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "mashupcontainer-16",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-21",
+                "TargetSection" : ""
+              }, {
+                "Id" : "ee209403-de42-424b-bde6-8fc1b011d4ee",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Manager",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Manager",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-21",
+                "TargetSection" : ""
+              }, {
+                "Id" : "766874e7-83f1-4401-a04d-2e9bfcda2213",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "selectedkpiName",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "selectedkpiName",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "navigationfunction-21",
+                "TargetSection" : ""
+              }, {
+                "Id" : "5b1802bd-91b2-4b48-ac94-80437678f74e",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "equipmentUid",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "equipmentUid",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "mashupcontainer-16",
+                "TargetSection" : ""
+              }, {
+                "Id" : "f8ff39fd-e1dc-4bfc-9784-7e21d7e1f8fc",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "materialUid",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "materialUid",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "mashupcontainer-16",
+                "TargetSection" : ""
+              }, {
+                "Id" : "b23e95ec-e004-4763-9aa6-561b5316d2a9",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "shiftUid",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "shiftUid",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "mashupcontainer-16",
+                "TargetSection" : ""
+              }, {
+                "Id" : "9ab8f8ef-4b29-4b13-b7ab-3b87643e1c42",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "status",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "status",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceDetails" : "",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "mashupcontainer-16",
+                "TargetSection" : ""
+              }, {
+                "Id" : "3ee82f3b-883e-47c5-9b3e-2d32e0d9d89b",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "DD2_SelectedText",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "sortStatusBy",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstoolbar-20",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "mashupcontainer-16",
+                "TargetSection" : ""
+              }, {
+                "Id" : "8e3271ff-7976-4483-bbd9-4bacf36c2cd4",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "DD2_Visible",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "expression-19",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstoolbar-20",
+                "TargetSection" : ""
+              }, {
+                "Id" : "63cc40f3-5aa3-4191-a909-0e6dc56d8711",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "T1_State",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "input",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceDetails" : "",
+                "SourceId" : "ptcstoolbar-20",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "expression-19",
+                "TargetSection" : ""
+              }, {
+                "Id" : "fdeba241-768e-4e41-a317-e4d6db087b99",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "T2_State",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "expression-19",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstoolbar-20",
+                "TargetSection" : ""
+              }, {
+                "Id" : "f990776b-f9cd-49a5-a0b6-30dfab5a2648",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Output",
+                  "SourcePropertyBaseType" : "BOOLEAN",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "T1_State",
+                  "TargetPropertyBaseType" : "BOOLEAN",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "expression-18",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "ptcstoolbar-20",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : { },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Things_PTCSC.ReportingBlock.Manager",
+                "EventHandlerService" : "GetToolbarConfigurationForCardDetails",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "225716ca-3aa9-4ab0-9b09-6d8af7d6b3fd"
+              }, {
+                "EventHandlerArea" : "UI",
+                "EventHandlerId" : "navigationfunction-21",
+                "EventHandlerService" : "Navigate",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "B2_Clicked",
+                "EventTriggerId" : "ptcstoolbar-20",
+                "EventTriggerSection" : "",
+                "Id" : "d0e6b0c2-c616-4ca9-b133-43d0c87effa4"
+              } ],
+              "RunTimePermissions" : { },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButton" : "SimplePlus",
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImage" : "",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButton" : "SimpleGear",
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "StyleProperties" : {
+                    "data" : {
+                      "flexcontainer-10" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#f7f7f7"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-14" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#f7f7f7"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-4" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#f7f7f7"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-8" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#f7f7f7"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      },
+                      "flexcontainer-9" : {
+                        "parts" : {
+                          "$" : {
+                            "$" : {
+                              "background" : "#f7f7f7"
+                            }
+                          }
+                        },
+                        "widget" : "flex-container"
+                      }
+                    },
+                    "meta" : {
+                      "type" : "WidgetStyler",
+                      "version" : "1.0"
+                    }
+                  },
+                  "StyleTheme" : "PTC Convergence Theme",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "UseMasterTheme" : false,
+                  "UseTheme" : false,
+                  "UseThemeForHybrids" : false,
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "status"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "shiftUid"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "materialUid"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "equipmentUid"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "selectedkpiName"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "MashupNavigation"
+                  }, {
+                    "Aspects" : {
+                      "bindingDirection" : "BOTH",
+                      "isMandatory" : false
+                    },
+                    "BaseType" : "THINGNAME",
+                    "Description" : "",
+                    "ParameterName" : "Manager"
+                  } ],
+                  "id_index" : 21,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "DisplayName" : "container-2",
+                    "EnableExpandCollapse" : false,
+                    "ExpandCollapseTabLocation" : "inside",
+                    "Expanded" : true,
+                    "Id" : "flexcontainer-2",
+                    "LastContainer" : true,
+                    "Overlay" : false,
+                    "ResponsiveLayout" : true,
+                    "ShowDataLoading" : true,
+                    "ShowExpandCollapseTab" : false,
+                    "SourceURL" : "",
+                    "Style" : "DefaultContainerStyle",
+                    "StyleProperties" : { },
+                    "Type" : "flexcontainer",
+                    "UseTheme" : true,
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Responsive Container",
+                    "align-content" : "flex-start",
+                    "align-items" : "flex-start",
+                    "flex-basis" : "auto",
+                    "flex-direction" : "column",
+                    "flex-grow" : 1,
+                    "flex-max-height" : "",
+                    "flex-max-width" : "",
+                    "flex-min-height" : "",
+                    "flex-min-width" : "",
+                    "flex-shrink" : 1,
+                    "flex-size" : "default",
+                    "flex-wrap" : "nowrap",
+                    "iconClass" : "widgets-flexcontainer",
+                    "justify-content" : "flex-start",
+                    "positioning" : "responsive",
+                    "userCannotRemove" : true
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-14",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-14",
+                      "LastContainer" : false,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-max-height" : "10px",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "10px",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "fixed",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-4",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-4",
+                      "LastContainer" : false,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "center",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-max-height" : "46px",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "46px",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "fixed",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer-fixed",
+                      "isLocked" : false,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "B1_Disabled" : false,
+                        "B1_Visible" : true,
+                        "B2_Disabled" : false,
+                        "B2_Visible" : true,
+                        "Borders" : "tblr",
+                        "CategoryLabel" : "Filter by",
+                        "ConditionLabel" : "Condition",
+                        "CustomBaseTypesMapping" : {
+                          "default" : "string",
+                          "image" : "unsupported",
+                          "infotable" : "unsupported",
+                          "integer" : "number",
+                          "long" : "number",
+                          "nothing" : "unsupported",
+                          "password" : "unsupported",
+                          "schedule" : "unsupported",
+                          "tags" : "unsupported",
+                          "timespan" : "datetime",
+                          "values" : "unsupported",
+                          "xml" : "unsupported"
+                        },
+                        "DD2_Disabled" : false,
+                        "DD2_SelectedText" : "1",
+                        "DD2_Visible" : true,
+                        "Disabled" : false,
+                        "DisplayName" : "ptcs-toolbar-20",
+                        "FilterChipPosition" : "bottom",
+                        "FilterDateOrder" : "auto",
+                        "FilterDisclosureType" : "link",
+                        "FilterType" : "none",
+                        "HideFilterSeparator" : false,
+                        "Id" : "ptcstoolbar-20",
+                        "LastContainer" : false,
+                        "LatitudeLabel" : "Latitude",
+                        "Left" : 224,
+                        "LongitudeLabel" : "Longitude",
+                        "RangeEndValueLabel" : "Value 2",
+                        "RangeStartValueLabel" : "Value 1",
+                        "ResponsiveLayout" : true,
+                        "SelectTextDropdown" : "[[ThemePreview.select]]",
+                        "ShowCategoryListFilter" : false,
+                        "ShowDataLoading" : true,
+                        "ShowHideFilters" : true,
+                        "SimpleFilterAlignment" : "left",
+                        "SimpleFilterHintText" : "[[filter]]",
+                        "SimpleFilterPosition" : "left",
+                        "SimpleFilterWidth" : 273,
+                        "SortFilter" : true,
+                        "T1_Disabled" : false,
+                        "T1_State" : true,
+                        "T1_Visible" : true,
+                        "T2_Disabled" : false,
+                        "T2_State" : false,
+                        "T2_Visible" : true,
+                        "TabSequence" : 0,
+                        "Top" : 26,
+                        "Type" : "ptcstoolbar",
+                        "UnitsLabel" : "Units",
+                        "UseTheme" : true,
+                        "ValueLabel" : "Value",
+                        "Variant" : "secondary",
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Toolbar (Preview)"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "Area" : "UI",
+                      "DisplayName" : "container-3",
+                      "EnableExpandCollapse" : false,
+                      "ExpandCollapseTabLocation" : "inside",
+                      "Expanded" : true,
+                      "Id" : "flexcontainer-3",
+                      "LastContainer" : true,
+                      "Overlay" : false,
+                      "ResponsiveLayout" : false,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "SourceURL" : "",
+                      "Style" : "DefaultContainerStyle",
+                      "StyleProperties" : { },
+                      "Type" : "flexcontainer",
+                      "UseTheme" : true,
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Responsive Container",
+                      "align-content" : "flex-start",
+                      "align-items" : "flex-start",
+                      "flex-basis" : "auto",
+                      "flex-direction" : "row",
+                      "flex-grow" : 1,
+                      "flex-max-height" : "",
+                      "flex-max-width" : "",
+                      "flex-min-height" : "",
+                      "flex-min-width" : "",
+                      "flex-shrink" : 1,
+                      "flex-size" : "default",
+                      "flex-wrap" : "nowrap",
+                      "iconClass" : "widgets-flexcontainer",
+                      "isLocked" : true,
+                      "justify-content" : "flex-start",
+                      "positioning" : "responsive",
+                      "userCannotRemove" : false
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "DisplayName" : "mashupcontainer-16",
+                        "Height" : 300,
+                        "Id" : "mashupcontainer-16",
+                        "LastContainer" : false,
+                        "Left" : 409,
+                        "MashupParameters" : [ {
+                          "BaseType" : "STRING",
+                          "Description" : "",
+                          "ParameterName" : "materialUid",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "BOTH",
+                              "isMandatory" : "false"
+                            },
+                            "baseType" : "STRING",
+                            "description" : "",
+                            "name" : "materialUid",
+                            "ordinal" : 0
+                          }
+                        }, {
+                          "BaseType" : "STRING",
+                          "Description" : "",
+                          "ParameterName" : "equipmentUid",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "BOTH",
+                              "isMandatory" : "false"
+                            },
+                            "baseType" : "STRING",
+                            "description" : "",
+                            "name" : "equipmentUid",
+                            "ordinal" : 0
+                          }
+                        }, {
+                          "BaseType" : "STRING",
+                          "Description" : "",
+                          "ParameterName" : "shiftUid",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "BOTH",
+                              "isMandatory" : "false"
+                            },
+                            "baseType" : "STRING",
+                            "description" : "",
+                            "name" : "shiftUid",
+                            "ordinal" : 0
+                          }
+                        }, {
+                          "BaseType" : "STRING",
+                          "Description" : "",
+                          "ParameterName" : "selectedkpiName",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "BOTH",
+                              "isMandatory" : "false"
+                            },
+                            "baseType" : "STRING",
+                            "description" : "",
+                            "name" : "selectedkpiName",
+                            "ordinal" : 0
+                          }
+                        }, {
+                          "BaseType" : "STRING",
+                          "Description" : "",
+                          "ParameterName" : "sortStatusBy",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "BOTH",
+                              "isMandatory" : "false"
+                            },
+                            "baseType" : "STRING",
+                            "description" : "",
+                            "name" : "sortStatusBy",
+                            "ordinal" : 0
+                          }
+                        }, {
+                          "BaseType" : "THINGNAME",
+                          "Description" : "",
+                          "ParameterName" : "Manager",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "BOTH",
+                              "isMandatory" : "false"
+                            },
+                            "baseType" : "THINGNAME",
+                            "description" : "",
+                            "name" : "Manager",
+                            "ordinal" : 0
+                          }
+                        }, {
+                          "BaseType" : "INFOTABLE",
+                          "Description" : "",
+                          "ParameterName" : "hierarchyDrillDown",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "BOTH",
+                              "dataShape" : "PTCSC.ReportingBlock.HierarchyBreakdown_DS",
+                              "isMandatory" : "false"
+                            },
+                            "baseType" : "INFOTABLE",
+                            "description" : "",
+                            "name" : "hierarchyDrillDown",
+                            "ordinal" : 0
+                          }
+                        }, {
+                          "BaseType" : "STRING",
+                          "Description" : "",
+                          "ParameterName" : "status",
+                          "ParmDef" : {
+                            "aspects" : {
+                              "bindingDirection" : "BOTH",
+                              "isMandatory" : "false"
+                            },
+                            "baseType" : "STRING",
+                            "description" : "",
+                            "name" : "status",
+                            "ordinal" : 0
+                          }
+                        } ],
+                        "Name" : "PTCSC.ReportingBlock.MetricDetailsHierarchy_MU",
+                        "ResponsiveLayout" : true,
+                        "ShowDataLoading" : true,
+                        "TabSequenceGroup" : 0,
+                        "Top" : 221,
+                        "Type" : "mashupcontainer",
+                        "Visible" : true,
+                        "Width" : 400,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Contained Mashup"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  } ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : true,
+                    "DataChangeType" : "ALWAYS",
+                    "DisplayName" : "selectedContained",
+                    "Expression" : "(input == true) ? \"PTCSC.ReportingBlock.MetricDetailsOverview_MU\" : \"PTCSC.ReportingBlock.MetricDetailsHierarchy_MU\"",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression-17",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "OutputBaseType" : "STRING",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : null,
+                    "Type" : "expression",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : "true",
+                      "Description" : "",
+                      "ParameterName" : "input",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : true,
+                    "DataChangeType" : "ALWAYS",
+                    "DisplayName" : "HierarchyState",
+                    "Expression" : "!input",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression-18",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "OutputBaseType" : "BOOLEAN",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : null,
+                    "Type" : "expression",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : false,
+                      "Description" : "",
+                      "ParameterName" : "input",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "AutoEvaluate" : true,
+                    "DataChangeType" : "ALWAYS",
+                    "DisplayName" : "OverviewState",
+                    "Expression" : "!input",
+                    "FireOnFirstValue" : false,
+                    "Height" : 28,
+                    "Id" : "expression-19",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "OutputBaseType" : "BOOLEAN",
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Top" : null,
+                    "Type" : "expression",
+                    "Visible" : true,
+                    "Width" : 200,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Expression",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "BOOLEAN",
+                      "DefaultValue" : false,
+                      "Description" : "",
+                      "ParameterName" : "input",
+                      "bindingDirection" : "Target",
+                      "bindingType" : "Property",
+                      "isBindingSource" : false,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "ClickOutsideToClose" : false,
+                    "CloseButton" : false,
+                    "DisplayName" : "hierarchyExpandView",
+                    "Id" : "navigationfunction-21",
+                    "LastContainer" : false,
+                    "Left" : null,
+                    "MashupParameters" : [ {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "selectedkpiName",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "STRING",
+                        "description" : "",
+                        "name" : "selectedkpiName",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "THINGNAME",
+                      "Description" : "",
+                      "ParameterName" : "Manager",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "THINGNAME",
+                        "description" : "",
+                        "name" : "Manager",
+                        "ordinal" : 0
+                      }
+                    }, {
+                      "BaseType" : "INFOTABLE",
+                      "Description" : "",
+                      "ParameterName" : "hierarchyDrillDown",
+                      "ParmDef" : {
+                        "aspects" : {
+                          "bindingDirection" : "BOTH",
+                          "dataShape" : "PTCSC.ReportingBlock.HierarchyBreakdown_DS",
+                          "isMandatory" : "false"
+                        },
+                        "baseType" : "INFOTABLE",
+                        "description" : "",
+                        "name" : "hierarchyDrillDown",
+                        "ordinal" : 0
+                      }
+                    } ],
+                    "MissingMashupMessage" : "",
+                    "PopupHeight" : 0,
+                    "PopupScrollbar" : "auto",
+                    "PopupTitle" : "",
+                    "PopupWidth" : 0,
+                    "RedirectTo" : "mashup",
+                    "ReloadOnReplace" : false,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "TargetMashup" : "PTCSC.ReportingBlock.MetricDetailsHierarchyExpandView_MU",
+                    "TargetWindowType" : "fullscreen",
+                    "Text" : "tw.navigationfunction-ide.properties.text.default-value",
+                    "Top" : null,
+                    "Type" : "navigationfunction",
+                    "URL" : "",
+                    "URLTargetType" : "new",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "navigationfunction",
+                    "_currentParameterDefs" : [ {
+                      "BaseType" : "THINGNAME",
+                      "Description" : "",
+                      "ParameterName" : "Manager",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "INFOTABLE",
+                      "DefaultValue" : {
+                        "dataShape" : {
+                          "fieldDefinitions" : {
+                            "cardHeight" : {
+                              "aspects" : {
+                                "defaultValue" : 500,
+                                "isPrimaryKey" : false
+                              },
+                              "baseType" : "NUMBER",
+                              "description" : "",
+                              "name" : "cardHeight",
+                              "ordinal" : 5
+                            },
+                            "cardMashupName" : {
+                              "aspects" : {
+                                "isPrimaryKey" : false
+                              },
+                              "baseType" : "MASHUPNAME",
+                              "description" : "",
+                              "name" : "cardMashupName",
+                              "ordinal" : 7
+                            },
+                            "cardWidth" : {
+                              "aspects" : {
+                                "defaultValue" : 500,
+                                "isPrimaryKey" : false
+                              },
+                              "baseType" : "NUMBER",
+                              "description" : "",
+                              "name" : "cardWidth",
+                              "ordinal" : 6
+                            },
+                            "dashboardIdentifier" : {
+                              "aspects" : {
+                                "defaultValue" : "b3d07c3c-e581-4d5b-b057-012dd70db649",
+                                "isPrimaryKey" : true
+                              },
+                              "baseType" : "GUID",
+                              "description" : "",
+                              "name" : "dashboardIdentifier",
+                              "ordinal" : 2
+                            },
+                            "dashboardName" : {
+                              "aspects" : {
+                                "defaultValue" : "Default",
+                                "isPrimaryKey" : false
+                              },
+                              "baseType" : "STRING",
+                              "description" : "",
+                              "name" : "dashboardName",
+                              "ordinal" : 3
+                            },
+                            "equipmentName" : {
+                              "aspects" : {
+                                "isPrimaryKey" : false
+                              },
+                              "baseType" : "STRING",
+                              "description" : "",
+                              "name" : "equipmentName",
+                              "ordinal" : 9
+                            },
+                            "kpiName" : {
+                              "aspects" : {
+                                "defaultValue" : "EffectiveTime",
+                                "isPrimaryKey" : false
+                              },
+                              "baseType" : "STRING",
+                              "description" : "",
+                              "name" : "kpiName",
+                              "ordinal" : 8
+                            },
+                            "username" : {
+                              "aspects" : {
+                                "defaultValue" : "Administrator",
+                                "isPrimaryKey" : false
+                              },
+                              "baseType" : "STRING",
+                              "description" : "",
+                              "name" : "username",
+                              "ordinal" : 1
+                            }
+                          },
+                          "name" : "PTCSC.ReportingBlock.HierarchyBreakdown_DS"
+                        },
+                        "rows" : [ ]
+                      },
+                      "Description" : "",
+                      "ParameterName" : "hierarchyDrillDown",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    }, {
+                      "BaseType" : "STRING",
+                      "Description" : "",
+                      "ParameterName" : "selectedkpiName",
+                      "bindingDirection" : "Both",
+                      "bindingType" : "Property",
+                      "isBindingSource" : true,
+                      "isBindingTarget" : true,
+                      "shown" : true
+                    } ]
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>
