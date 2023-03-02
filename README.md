@@ -5,7 +5,7 @@ Reporting Tool used for device metrics / factory metrics
 This Software is not officially supported by PTC By downloading this software, the user acknowledges that it is unsupported, not reviewed for security purposes, and that the user assumes all risk for running it. Users accept all risk whatsoever regarding the security of the code they download. PTC will not accept technical support cases logged related to to this Software PTC has not performed its full breadth of testing and quality assurance on this software. This Software has not been released for general distribution or sale. This Software may not be compatible with any existing or future commercial release versions of PTC software. PTC is under no obligation to and may never commercially release this software or other software containing functionality contained in this Software. PTC is not responsible for any maintenance for this software.
 
 ## Overview
-The project is a standard building block in compliance with the building block design principles of PTC. It offers only the services to extract data from the database tables used by the PTC Domain-Specific Building Blocks (See PTC help pages for Domain-Specific Building Blocks). The block offers only export services without a UI interface therefore it is recommended to be installed and configured together with the generic UI block for export (PTCSC.DataExport).
+This project is a demo SCP application to show the capabilities of the Thingworx platform in the context of reporting device information. It provides the user a configurable dashboard and metrics, with a modern look and feel.
 
 ## License
 PTC Proprietary Freeware License
