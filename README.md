@@ -18,22 +18,3 @@ I accept the PTC End User License Agreement (https://www.ptc.com/en/documents/le
 I acknowledge that I am not entitled to support assistance with respect to the software, and PTC will have no obligation to maintain the software or provide bug fixes or security patches or new releases.
 
 The software is provided “As Is” and with no warranty, indemnitees or guarantees whatsoever, and PTC will have no liability whatsoever with respect to the software, including with respect to any intellectual property infringement claims or security incidents or data loss.
-
-## How to install Reporting Block with demo data:
-
-1.	First Method 
-*	Install ptcsc.reportingblockall-1.1.0.zip extension
-*	Unzip sampledata.zip and install one by one all the tables as import type data (single file)
-
-2.	Second Method
-*	Install ptcsc.reportingblock-1.1.0.zip extension
-*	Install ptcsc.metricsforreportingblock-1.1.0.zip extension
-*	Install tractorproject-1.1.0.zip extension
-*	Unzip sampledata.zip and install one by one all the tables as import type data (single file)
-
-3.	Third Method
-*	Install PTCSC.ReportingBlock1.1.xml
-*	Install PTCSC.MetricsForReportingBlock1.1.xml
-*	Install TractorProject.xml
-*	Install LocalizationTable.xml
-*	Unzip sampledata.zip and install one by one all the tables as import type data (single file)
