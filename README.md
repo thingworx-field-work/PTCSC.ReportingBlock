@@ -7,6 +7,10 @@ This Software is not officially supported by PTC By downloading this software, t
 ## Overview
 This project is a demo SCP application to show the capabilities of the Thingworx platform in the context of reporting device information. It provides the user a configurable dashboard and metrics, with a modern look and feel.
 
+## Author
+Dumitru Zanfir, Principal Implementations Consultant
+Andrei Dombrovschi, Solutions Software Developer
+
 ## License
 PTC Proprietary Freeware License
 I accept the PTC End User License Agreement (https://www.ptc.com/en/documents/legal-agreements/on-premise-license-agreements) and agree that any software downloaded/utilized will be in compliance with that Agreement. However, despite anything to the contrary in the License Agreement, I agree as follows:
