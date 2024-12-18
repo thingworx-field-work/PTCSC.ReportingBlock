@@ -7,6 +7,7 @@ This project is a demo SCP application to show the capabilities of the Thingworx
 
 ## Author
 Dumitru Zanfir - Principal Implementations Consultant 
+
 Andrei Dombrovschi - Solutions Software Developer             
 
 
